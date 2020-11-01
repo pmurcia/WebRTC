@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge WebRTC</title>
+
+    <!-- WebRTC icon -->
+    <link rel="icon" href="favicon.png">
+    
+    <!-- CSS -->
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+    <!-- JavaScript -->
+    <script defer src="webrtc.js"></script>
+    <script defer src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+</head>
+<body>
+    <!-- Box for video inputs -->
+    <div class="videocall">
+        <!-- Bigger size, what the client receives -->
+        <div class="video-remote">
+            <video autoplay muted id="remote"></video>
+        </div>
+        
+        <!-- Smaller size, what the client sends -->
+        <div class="video-local">
+            <video autoplay muted id="local"></video>
+        </div>
+    </div>
+</body>
+</html>
