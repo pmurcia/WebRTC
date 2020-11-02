@@ -8,26 +8,43 @@
     <!-- WebRTC icon -->
     <link rel="icon" href="favicon.png">
     
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
     <!-- CSS -->
-    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style.css" type="text/css">
     
     <!-- JavaScript -->
     <script defer src="webrtc.js"></script>
-    <script defer src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 </head>
 <body>
     <!-- Box for video inputs -->
     <div class="videocall">
         <!-- Bigger size, what the client receives -->
-        <div class="video-remote">
-            <video autoplay muted id="remote"></video>
-        </div>
+        <video autoplay muted id="remote"></video>
         
         <!-- Smaller size, what the client sends -->
-        <div class="video-local">
-            <video autoplay muted id="local"></video>
+        <video autoplay muted id="local"></video>
+
+        <!-- Video call controls -->
+        <div class="controls-div">
+            <ul class="controls">
+                <li>
+                    <div class="control" onclick="toggleSource('video');" id="video">
+                        <i class="material-icons">videocam_off</i>
+                    </div>
+                </li>
+                <li>
+                    <div class="control" onclick="//toggleSource('audio');" id="audio">
+                        <i class="material-icons">mic_off</i>
+                    </div>
+                </li>
+                <li>
+                    <div class="control" onclick="call();" id="call">
+                        <i class="material-icons">call</i>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </body>

@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0 10vw;
+    background-color: #0e0e0e;
+}
+
+.videocall {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 4fr 1fr;
+    height: 100vh;
+    max-width: 100%;
+    background-color: #1f1f1f;
+}
+
+video#remote {
+    grid-area: 1 / 1 / span 1 / span 1;
+    justify-self: right;
+    align-self: ;
+}
+
+video#local {
+    grid-area: 2 / 2 / span 1 / span 1;
+    justify-self: left;
+    align-self: flex-start;
+}
+
+#remote, #local {
+    height: 100%;
+    max-width: 100%;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    list-style: none;
+    background-color: #393939;
+    color: white;
+    user-select: none;
+}
+
+.controls-div {
+    grid-area: 2 / 1 / span 1 / span 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 150ms; 
+}
+
+.control:hover {
+    background-color: #2f2f2f;
+    transition: background-color 150ms;
+}
+
+.control:active {
+    background-color: #232323;
+    transition: background-color 0s;
+}
+
+.calling {
+    background-color: #b31d1d;
+    transition: background-color 150ms;
+}
+
+.calling:hover {
+    background-color: #7e1515;
+    transition: background-color 150ms;
+}
